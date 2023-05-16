@@ -38,16 +38,25 @@ public class PacienteController {
 
     @PutMapping("{id}")
     @Transactional
-    public void atualizarPaciente(@PathVariable(value = "id") Long id,@RequestBody @Valid DadosAtualizacaoPaciente dados){
+    public ResponseEntity atualizarPaciente(@PathVariable(value = "id") Long id,@RequestBody @Valid DadosAtualizacaoPaciente dados){
         var paciente = repository.getById(id);
         paciente.atualizarInformacoes(dados);
-
+        return ResponseEntity.ok(new ListagemPacienteDto(paciente));
     }
 
     @DeleteMapping("{id}")
     @Transactional
-    public void desativarPaciente(@PathVariable(value = "id") Long id){
+    public ResponseEntity desativarPaciente(@PathVariable(value = "id") Long id){
         var paciente = repository.getById(id);
         paciente.excluir();
+
+        return ResponseEntity.noContent().build();
+    }
+    @GetMapping("{id}")
+    @Transactional
+    public ResponseEntity detalharPaciente(@PathVariable(value = "id") Long id){
+        var paciente = repository.getById(id);
+
+        return ResponseEntity.ok(new ListagemPacienteDto(paciente));
     }
 }
