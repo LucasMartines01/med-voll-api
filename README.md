@@ -6,7 +6,7 @@
 - Spring Validation<br>
 - Spring DevTools<br>
 - Lombock<br>
-- Spring Security with JWT
+- Spring Security with JWT<br>
 - Flyway Migrations<br>
 
 
