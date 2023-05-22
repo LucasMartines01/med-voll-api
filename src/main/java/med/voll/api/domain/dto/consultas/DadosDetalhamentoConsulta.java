@@ -9,6 +9,6 @@ import java.time.LocalDateTime;
 
 public record DadosDetalhamentoConsulta(Long idMedico, Long idPaciente, LocalDateTime data, Especialidade especialidade) {
     public DadosDetalhamentoConsulta(Consulta consulta) {
-        this(consulta.getMedico().getId(), consulta.getPaciente().getId(), consulta.getDataHora(), consulta.getMedico().getEspecialidade());
+        this(consulta.getMedico().getId(), consulta.getPaciente().getId(), consulta.getData(), consulta.getMedico().getEspecialidade());
     }
 }
