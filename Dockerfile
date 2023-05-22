@@ -1,6 +1,6 @@
 FROM mysql:latest
 
-ENV MYSQL_ROOT_PASSWORD=root
+ENV MYSQL_ROOT_PASSWORD=Lukinhas120@
 
 ENV MYSQL_DATABASE=vollmed
 
