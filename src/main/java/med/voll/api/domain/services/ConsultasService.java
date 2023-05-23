@@ -1,6 +1,6 @@
 package med.voll.api.domain.services;
 
-import med.voll.api.config.ValidacaoException;
+import med.voll.api.configurations.exceptions.ValidacaoException;
 import med.voll.api.domain.dto.consultas.DadosAgendamentoConsulta;
 import med.voll.api.domain.dto.consultas.DadosDetalhamentoConsulta;
 import med.voll.api.domain.entities.Consulta;

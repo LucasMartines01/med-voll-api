@@ -1,4 +1,4 @@
-package med.voll.api.config;
+package med.voll.api.configurations.exceptions;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package med.voll.api.config.security;
+package med.voll.api.configurations.security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
